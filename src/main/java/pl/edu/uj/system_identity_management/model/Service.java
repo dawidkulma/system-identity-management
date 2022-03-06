@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "Services")
 @Table(name = "services")
 @Getter
 @Setter
@@ -13,7 +13,6 @@ import javax.persistence.*;
 public class Service {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, unique = true)
