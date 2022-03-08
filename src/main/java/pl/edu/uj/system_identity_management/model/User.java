@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity(name = "Users")
+@Entity(name = "User")
 @Table(name = "users")
 @Getter
 @Setter
@@ -13,6 +13,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
@@ -21,6 +22,8 @@ public class User {
     @Column(nullable = false)
     private String surname;
 
-    @Column(nullable = false)
-    private Boolean isBlocked;
+    public User(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
 }

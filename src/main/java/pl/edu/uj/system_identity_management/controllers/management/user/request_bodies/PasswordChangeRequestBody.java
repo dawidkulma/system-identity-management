@@ -1,4 +1,4 @@
-package pl.edu.uj.system_identity_management.controllers.request_bodies;
+package pl.edu.uj.system_identity_management.controllers.management.user.request_bodies;
 
 import lombok.*;
 

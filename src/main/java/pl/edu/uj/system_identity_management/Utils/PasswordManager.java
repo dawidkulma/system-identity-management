@@ -6,7 +6,7 @@ import org.mindrot.jbcrypt.BCrypt;
  * Class contains some static methods to cope with things connected with passwords, such
  * like generating salt, creating hash, generating password etc.
  */
-public class PasswordManagement {
+public class PasswordManager {
     /**
      * Number of salt rounds, given as parameter to generate salt by BCrypt
      */

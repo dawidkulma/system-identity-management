@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity(name = "Services")
+@Entity(name = "Service")
 @Table(name = "services")
 @Getter
 @Setter
@@ -13,8 +13,13 @@ import javax.persistence.*;
 public class Service {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false, unique = true)
     private String url;
+
+    public Service(String url) {
+        this.url = url;
+    }
 }

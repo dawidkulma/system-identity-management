@@ -1,12 +1,15 @@
-package pl.edu.uj.system_identity_management.controllers.response_bodies;
+package pl.edu.uj.system_identity_management.controllers.management.user.response_bodies;
+
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserAuthenticationDetailsResponseBody {
+@Getter
+public class UserAuthenticationsDetailsResponseBody {
     private List<UserAuthenticationsToService> authentications;
 
-    public UserAuthenticationDetailsResponseBody() {
+    public UserAuthenticationsDetailsResponseBody() {
         this.authentications = new ArrayList<>();
     }
 

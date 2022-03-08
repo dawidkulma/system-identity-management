@@ -17,9 +17,14 @@ public class AuthenticationDetail {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "credential_id", nullable = false)
-    private Long credentialId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "credential_id")
+    private Credential credential;
 
     @Column(nullable = false)
-    private Date date;
+    private String date;
+
+    public AuthenticationDetail(String date) {
+        this.date = date;
+    }
 }

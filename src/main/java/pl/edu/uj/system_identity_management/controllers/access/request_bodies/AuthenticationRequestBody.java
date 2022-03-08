@@ -1,7 +1,6 @@
-package pl.edu.uj.system_identity_management.controllers.request_bodies;
+package pl.edu.uj.system_identity_management.controllers.access.request_bodies;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Getter
 @NoArgsConstructor

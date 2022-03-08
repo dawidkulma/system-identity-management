@@ -1,19 +1,22 @@
-package pl.edu.uj.system_identity_management.controllers.response_bodies;
+package pl.edu.uj.system_identity_management.controllers.management.user.response_bodies;
+
+import lombok.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+@Getter
+@AllArgsConstructor
 public class UserAuthenticationsToService {
     private String url;
-    private List<Date> dates;
+    private List<String> dates;
 
     public UserAuthenticationsToService(String url) {
         this.url = url;
         this.dates = new ArrayList<>();
     }
 
-    public void add(Date date) {
+    public void add(String date) {
         this.dates.add(date);
     }
 }
